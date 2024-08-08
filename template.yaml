@@ -18,7 +18,7 @@ Resources:
       Runtime: nodejs20.x
       Environment:
         Variables:
-          DATABASE_URL: postgresql://admin:DMcOMJ8zJpXCRSkMofm9O6MFVAC36MfY@dpg-cqo1q4jv2p9s73aj35eg-a.virginia-postgres.render.com/db_midas_vvpk
+          DATABASE_URL: postgresql://admin:DMcOMJ8zJpXCRSkMofm9O6MFVAC36MfY@dpg-cqo1q4jv2p9s73aj35eg-a.virginia-postgres.render.com/db_midas_vvpk?ssl=true
       Events:
         Products:
           Type: Api
