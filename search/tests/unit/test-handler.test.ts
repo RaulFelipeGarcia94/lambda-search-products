@@ -6,7 +6,7 @@ describe('Unit test for app handler', function () {
     it('verifies successful response', async () => {
         const event: APIGatewayProxyEvent = {
             httpMethod: 'get',
-            body: '',
+            body: '{"productName": "SPRAY PRETO BRILHANTE", "userLatitude": -19.95057, "userLongitude": -43.93672, "maxDistance": 10}',
             headers: {},
             isBase64Encoded: false,
             multiValueHeaders: {},
@@ -55,11 +55,8 @@ describe('Unit test for app handler', function () {
         };
         const result: APIGatewayProxyResult = await lambdaHandler(event);
 
+        console.log(result);
+
         expect(result.statusCode).toEqual(200);
-        expect(result.body).toEqual(
-            JSON.stringify({
-                message: 'hello world',
-            }),
-        );
     });
 });
