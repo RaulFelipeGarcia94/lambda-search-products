@@ -11,7 +11,7 @@ describe('Unit test for app handler', function () {
             isBase64Encoded: false,
             multiValueHeaders: {},
             multiValueQueryStringParameters: {},
-            path: '/hello',
+            path: '/products',
             pathParameters: {},
             queryStringParameters: {},
             requestContext: {
