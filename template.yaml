@@ -24,7 +24,7 @@ Resources:
           Type: Api
           Properties:
             Path: /products
-            Method: get
+            Method: post
     Metadata:
       BuildMethod: esbuild
       BuildProperties:
@@ -33,3 +33,7 @@ Resources:
         Sourcemap: true
         EntryPoints:
           - app.ts
+Outputs:
+  ProductsApi:
+    Description: "API Gateway endpoint URL for prod stage for SearchProductsFunction"
+    Value: !Sub "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/prod/products/"
